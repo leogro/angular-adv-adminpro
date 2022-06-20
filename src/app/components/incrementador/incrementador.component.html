@@ -1,0 +1,26 @@
+<div class="input-group"> <!--se configuro los valores del progressbar-->
+    <span class="input-group-btn">
+        <button (click)="cambiarValor(-5)"
+                [ngClass]="btnClass"
+                type="button">
+            <i class="fa fa-minus"></i>
+        </button>
+    </span>
+
+    <input type="number" 
+    class="form-control" 
+    [ngClass]="{'is-invalid': progreso > 100 || progreso < 0}" 
+    placeholder="Product name"
+    min="0"
+    max="100"
+    (ngModelChange)="onChange($event)"
+    [(ngModel)]="progreso"><!--[(emite y recibe valores)] || ngClass de arriba viene de boostrap pone que si es mayor a 100 o menor de 0 la zona de texto se pone roja-->
+    
+    <span class="input-group-btn">
+        <button (click)="cambiarValor(5)"
+                [ngClass]="btnClass"
+                type="button">
+            <i class="fa fa-plus"></i>
+        </button>
+    </span>
+</div> <!-- fin de la configuracion positiva o negativa de progressbar-->
