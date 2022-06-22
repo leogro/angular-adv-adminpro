@@ -1,47 +1,44 @@
-<!-- pagescomponent se mostrara cuando este autenticado se paso la informacion de app.component porque esta sera la ruta autenticada -->
 
 
-<div id="main-wrapper"> <!-- inicio main-wrapper -->
+
+<div id="main-wrapper">
 
     <app-header></app-header>
 
     <app-sidebar></app-sidebar>
 
-    <div class="page-wrapper"> <!-- inicio page-wrapper -->
+    <div class="page-wrapper">
+        <div class="container-fluid">
+            <!-- Breadcrumbs -->
+            <app-breadcrumbs></app-breadcrumbs>
 
-        <div class="container-fluid"> <!-- containerfluid -->
+            <!-- Mi sistema de rutas -->
+            <router-outlet></router-outlet>
 
-        <!-- Breadcrumbs -->
-        <app-breadcrumbs></app-breadcrumbs>
-        
-        <!-- Mi sistema de rutas -->
-
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
-                            <!--This is some text within a card block.-->
-
-                            <router-outlet></router-outlet> <!--sirvepara mostrar el componente en base a la ruta -->
-
+                            
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div> -->
 
-        </div> <!-- containerfluid -->
+        </div>
 
+        <!-- ============================================================== -->
         <!-- footer -->
-            <!-- ============================================================== -->
-            <footer class="footer">
-                © 20xx Admin Pro by wrappixel.com
-            </footer>
-            <!-- ============================================================== -->
-            <!-- End footer -->
-            <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <footer class="footer">
+            © 20xx Admin Pro by wrappixel.com
+        </footer>
+        <!-- ============================================================== -->
+        <!-- End footer -->
+        <!-- ============================================================== -->
 
-    </div> <!-- fin page-wrapper -->
+    </div>
 
 
+</div>
 
-</div> <!-- fin main-wrapper -->
