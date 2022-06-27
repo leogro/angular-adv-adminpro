@@ -2,53 +2,54 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-
-                <h4 class="card-title">Striped Progress bar  <a class="get-code" data-toggle="collapse" href="#pgr3" aria-expanded="true"><i class="fa fa-code" title="" data-toggle="tooltip" data-original-title="Get Code"></i></a></h4>
+                
+                <h4 class="card-title">Striped Progress bar</h4>
                 <div class="progress m-t-20">
-                    <div class="progress-bar bg-primary progress-bar-striped active" 
-                        style="height:5px;" 
+                    <div class="progress-bar bg-primary progress-bar-striped active"
+                        style="height:5px;"
                         [style.width]="getProgreso1"
-                        role="progressbar"> 
-                     </div> <!--  |||stlewidth y role van mencionandos en el progressbar component aqui se manda llamar los valores-->
+                         role="progressbar">
+                        </div>
                 </div>
 
                 <div class="progress m-t-20">
-                    <div class="progress-bar bg-info progress-bar-striped active" 
-                        style="height:5px;" 
-                        [style.width]="getProgreso2"
-                        role="progressbar"> 
-                     </div> <!--[style.width]="getProgreso1" |||stlewidth y role van mencionandos en el progressbar component aqui se manda llamar los valores-->
+                    <div class="progress-bar bg-info progress-bar-striped active"
+                         style="height:5px;"
+                         [style.width]="getProgreso2"
+                         role="progressbar">
+                        </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-    <div class="row">
+<div class="row">
 
-        <div class="col-6">
-            <div class="card">
-                <div class="card-body">
-
-                    <app-incrementador (valor)="progreso1 = $event " 
-                                        [valor]="progreso1">
-                    </app-incrementador> <!--manda llamar el incrementador component html/para mandar valor pr defecto se pone entre corchetes y la variable progreso que esta en incrementador component ts tiene el valor x -->
-
-                </div>
-            </div>
-        </div>
-
-        <div class="col-6">
-            <div class="card">
-                <div class="card-body">
-
-                    <app-incrementador (valor)="progreso2 = $event " 
-                                        [valor]="progreso2" 
-                                        [btnClass]="'btn btn-info'"> <!--no se puede poner [] si se mandara un valor en js no se puede utilizar el - para nombres de variables -->
-                    </app-incrementador>
-                    
-                </div>
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+    
+                <app-incrementador (valor)="progreso1 = $event" 
+                                   [valor]="progreso1">
+                </app-incrementador>
+    
             </div>
         </div>
     </div>
 
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+    
+                <app-incrementador (valor)="progreso2 = $event" 
+                                    [valor]="progreso2"
+                                    [btnClass]="'btn-info'">
+                </app-incrementador>
+    
+            </div>
+        </div>
+    </div>
+
+
+</div>

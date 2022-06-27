@@ -1,34 +1,31 @@
-//archivo de las rutas principales de la aplicacion
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-//importamos el modulo del router
+// Modulos
 import { PagesRoutingModule } from './pages/pages.routing';
-
-import { NotpagefoundComponent } from './notpagefound/notpagefound.component';
 import { AuthRoutingModule } from './auth/auth.routing';
 
+import { NopagefoundComponent } from './nopagefound/nopagefound.component';
 
-//Routes se importa desde angular router se hace arreglo
+
 const routes: Routes = [
 
-//path: '/dashboard'-progress y grafical PagesRouting
-//path: '/auth'- login y register AuthRouting
-//path: '/medicos' MedicosRouting
-//path: '/compras' ComprasRouting
-
-//rutas publicas
-  {path: '', redirectTo: '/dashboard', pathMatch: 'full'},
-  {path: '**', component: NotpagefoundComponent}
+  // path: '/dashboard' PagesRouting
+  // path: '/auth' AuthRouting
+  // path: '/medicos' MedicosRouting
+  // path: '/compras' ComprasRouting
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '**', component: NopagefoundComponent },
 ];
+
 
 
 @NgModule({
   imports: [
-    RouterModule.forRoot( routes ), //forroot es para importar rutas principales, y se manda llamar el arreglo de routes
-    PagesRoutingModule,//pagesrouting se exporta
+    RouterModule.forRoot( routes ),
+    PagesRoutingModule,
     AuthRoutingModule
   ],
-  exports: [RouterModule] //se exporta el modulo de router para que se puedan utilizar sus rutas
+  exports: [ RouterModule ]
 })
 export class AppRoutingModule { }
