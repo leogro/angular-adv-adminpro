@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class SidebarService {
 
   menu: any[] = [
-    {//se me borro la informacion hecha y escrita en notas
+    {
       titulo: 'Dashboard',
       icono: 'mdi mdi-gauge',
       submenu: [
